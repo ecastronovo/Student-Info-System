@@ -1,0 +1,18 @@
+
+<form class="" action="/students" method="post" align=center>
+  <h1>New Student</h1>
+  <h2>firstname</h2>
+  <input required type="text" placeholder ="Frank" name=student[firstname] value=<%= @newStudent.firstname%>>
+  <h2>lastname</h2>
+  <input required type="text" placeholder ="Sinatra" name=student[lastname] value=<%= @newStudent.lastname%>>
+  <h2>studentid</h2>
+  <input required type="text" placeholder ="12345" name=student[studentid] value=<%= @newStudent.studentid%>>
+
+  <h2>birthday</h2>
+  <input required type="date" placeholder ="12-12-1915" name=student[birthday] value=<%= @newStudent.birthday%>>
+  <h2>address (MM-DD-YYYY)</h2>
+  <input required type="text" placeholder ="California" name=student[address] value=<%= @newStudent.address%>>
+  <div>
+    <input type="submit" name="save" value="Save">
+  </div>
+</form>

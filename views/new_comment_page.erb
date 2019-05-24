@@ -1,0 +1,11 @@
+<form class="" action="/comments" method="post" align=center>
+  <h1>New Comment</h1>
+  <h2>Name</h2>
+  <input required type="text" placeholder ="Frank" name=comment[name] value=<%= @newComment.name%>>
+  <h2>Content</h2>
+  <input required type="text" placeholder ="Sinatra" name=comment[content] value=<%= @newComment.content%>>
+
+  <div>
+    <input type="submit" name="save" value="Save">
+  </div>
+</form>

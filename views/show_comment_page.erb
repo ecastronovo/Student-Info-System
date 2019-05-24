@@ -1,0 +1,22 @@
+<div>
+  <h1>Show Comment Page</h1>
+  <% if @showComment != nil %>
+  <table id="comment_table">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Content</th>
+    <th>Date</th>
+  </tr>
+       <tr>
+         <td><a href="/comments/<%= @showComment.id %>"><%= @showComment.id %></a></td>
+         <td><a href="/comments/<%= @showComment.id %>"><%= @showComment.name %></a></td>
+         <td><a href="/comments/<%= @showComment.id %>"><%= @showComment.content %></a></td>
+         <td><a href="/comments/<%= @showComment.id %>"><%= @showComment.created_at %></a></td>
+    </tr>
+  <% else %>
+    <p>This Comment Does Not Exist</p>
+  <% end %>
+
+<p><a href="/comments/new">Add A New Comment</a></p>
+</div>

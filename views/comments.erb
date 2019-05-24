@@ -1,0 +1,25 @@
+<div>
+  <h1>Comments Page</h1>
+
+  <% if @comments.any? %>
+  <table id="comment_table">
+  <tr>
+    <th>ID</th>
+    <th>Person Name</th>
+    <th>Comment Content</th>
+    <th>Time</th>
+  </tr>
+    <% @comments.each do|comment| %>
+       <tr>
+         <td><a href="/comments/<%= comment.id %>"><%= comment.id %></a></td>
+         <td><a href="/comments/<%= comment.id %>"><%= comment.name %></a></td>
+         <td><a href="/comments/<%= comment.id %>"><%= comment.content %></a></td>
+         <td><a href="/comments/<%= comment.id %>"><%= comment.created_at %></a></td>
+    </tr>
+    <% end %>
+  <% else %>
+    <p>This Comment Does Not Exist.</p>
+  <% end %>
+
+<p><a href="/comments/new">Add A New Comment</a></p>
+</div>

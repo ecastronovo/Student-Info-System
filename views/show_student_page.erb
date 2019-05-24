@@ -1,0 +1,32 @@
+<div>
+  <h1>Show Student Page</h1>
+  <% if @showStudent != nil %>
+  <table id="student_table">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Student ID</th>
+    <th>Birthday</th>
+    <th>Address/th>
+    <th>Delete</th>
+    <th>Edit</th>
+  </tr>
+       <tr>
+         <td><a href="/students/<%= @showStudent.id %>"><%= @showStudent.firstname %></a></td>
+         <td><a href="/students/<%= @showStudent.id %>"><%= @showStudent.lastname %></a></td>
+         <td><a href="/students/<%= @showStudent.id %>"><%= @showStudent.studentid %></a></td>
+         <td><a href="/students/<%= @showStudent.id %>"><%= @showStudent.birthday %></a></td>
+         <td><a href="/students/<%= @showStudent.id %>"><%= @showStudent.address %></a></td>
+         <td><form action='/students/<%= @showStudent.id%>' method='post'>
+              <input type="hidden" name="_method" value="DELETE">
+              <input type="submit" value="Delete">
+              </form>
+         </td>
+         <td><a href='/students/<%=@showStudent.id%>/edit'><button type="button" name="button">Edit</button></a></td>
+    </tr>
+  <% else %>
+    <p>This Student Does Not Exist</p>
+  <% end %>
+
+<p><a href="/students/new">Add A New Student</a></p>
+</div>

@@ -1,0 +1,97 @@
+$red: #903;
+$black: #444;
+$white: #fff;
+$main-font: Helvetica, Arial, sans-serif;
+$htmlbgcolor: #ccc;
+$bodybgcolor: #dddcd9;
+$ahovercolor: #637094;
+$headercolor: #a09b89;
+
+html {
+    background-color: $htmlbgcolor;
+}
+body {
+    width:700px;
+    height:900px;
+    background-color: $bodybgcolor;
+    margin:2em auto 2em;
+    padding:25px;
+    position:relative;
+    font-family: $main-font;
+}
+
+
+h1 {
+  color: $red;
+  font: 32px/1 $main-font;
+}
+
+header h1 {
+  font-size: 40px;
+  line-height: 80px;
+  background: transparent url(/images/logo.png) 0 0 no-repeat;
+  padding-left: 105px;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: grey;
+  text-align: center;
+}
+
+#student_table, #comment_table{
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+#student_table tr:nth-child(even){background-color: #f2f2f2;}
+#comment_table tr:nth-child(even){background-color: #f2f2f2;}
+#student_table td, #student_table th, #comment_table th, #comment_table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#student_table th, #comment_table th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+@mixin tabs ($background: blue, $color: yellow) {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: $background;
+    overflow: hidden;
+  }
+  li {
+    float: left;
+  }
+  a {
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    background: $background;
+    color: $color;
+    &:hover {
+      background: darken($background, 20%);
+    }
+  }
+}
+
+nav {
+  @include tabs ($background: $black, $color: $white);
+  font-weight: bold;
+}
+
+p {
+  font: 13px/1.4 $main-font;
+}
+
+label {
+  display: block;
+}
