@@ -1,10 +1,10 @@
 require 'sinatra'
-require 'sinatra/reloader' if development?
+#require 'sinatra/reloader' if development?
 require 'sass'
 require 'erb'
 require './student'
 require './comment'
-require 'dm-timestamps'
+#require 'dm-timestamps'
 
 #home, about, contact, students, comment, video, login
 
