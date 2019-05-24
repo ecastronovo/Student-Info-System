@@ -25,6 +25,7 @@ GEM
       data_objects (= 0.10.17)
     eventmachine (1.2.7)
     ffi (1.11.1)
+    irb (1.0.0)
     mustermann (1.0.3)
     pg (1.1.4)
     public_suffix (3.0.3)
@@ -62,6 +63,7 @@ DEPENDENCIES
   dm-migrations
   dm-postgres-adapter
   dm-sqlite-adapter
+  irb
   pg
   sass
   sinatra
