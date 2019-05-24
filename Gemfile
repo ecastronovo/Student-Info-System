@@ -1,5 +1,6 @@
 source :rubygems
 ruby '2.6.3'
+gem "irb"
 gem "sinatra"
 gem "slim"
 gem "sass"
